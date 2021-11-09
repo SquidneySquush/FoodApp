@@ -1,87 +1,29 @@
-import React, { useState } from 'react';
+import "./styles.css";
+import React from 'react';
+import italian_background from './italian_background.png';
 
 export default function App() {
-	const questions = [
-		{
-			questionText: 'What zones are you willing to venture out to?',
-			answerOptions: [
-				{ answerText: 'A', isCorrect: 'A' },
-				{ answerText: 'B', isCorrect: 'B' },
-				{ answerText: 'C', isCorrect: 'C' },
-				{ answerText: 'D', isCorrect: 'D' },
-			],
-		},
-		{
-			questionText: 'Boujie or Ballin’ on a Budget?',
-			answerOptions: [
-				{ answerText: '$', isCorrect: '$' },
-				{ answerText: '$$', isCorrect: '$$', },
-				{ answerText: '$$$', isCorrect: '$$$', },
-				{ answerText: '$$$$', isCorrect: '$$$$', },
-				{ answerText: '$$$$$', isCorrect: '$$$$$', },
-			],
-		},
-		{
-			questionText: 'Any cravings?',
-			answerOptions: [
-				{ answerText: 'Italian', isCorrect: 'Italian' },
-				{ answerText: 'Chinese', isCorrect: 'Chinese' },
-				{ answerText: 'Indian', isCorrect: 'Indian' },
-				{ answerText: 'French', isCorrect: 'French' },
-				{ answerText: 'America', isCorrect: 'America' },
-				{ answerText: 'Japanese', isCorrect: 'Japanese' },
-				{ answerText: 'Thai', isCorrect: 'Thai' },
-				{ answerText: 'Brazilian', isCorrect: 'Brazilian' },
-				{ answerText: 'Mexican', isCorrect: 'Mexican' },
-			],
-		},
-		{
-			questionText: 'Preferring Vegetarian?',
-			answerOptions: [
-				{ answerText: 'Yes', isCorrect: 'Yes' },
-				{ answerText: 'No', isCorrect: 'No' },
-			],
-		},
-	];
+  return (
+  
+    <div className='app'> 
+    
 
-	const [currentQuestion, setCurrentQuestion] = useState(0);
-	const [showScore, setShowScore] = useState(false);
-	const [answers, setAnswers] = useState([]);
-
-	const handleAnswerOptionClick = (isCorrect) => {
-		if (isCorrect) {
-			answers.push(isCorrect);
-		}
-
-		const nextQuestion = currentQuestion + 1;
-		if (nextQuestion < questions.length) {
-			setCurrentQuestion(nextQuestion);
-		} else {
-			setShowScore(true);
-		}
-	};
-	console.log(answers);
-	return (
-		<div className='app'>
-			{showScore ? (
-				<div className='score-section'>
-					You scored {answers} out of {questions.length}
+			<div className='score-section'>
+				Pizza Mind
+			</div>
+			<div className='Button-options'>
+				<div className='TakeQuiz'>
+				<button  >Take Quiz </button>
 				</div>
-			) : (
-				<>
-					<div className='question-section'>
-						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
-						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
-					</div>
-					<div className='answer-section'>
-						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
-					</div>
-				</>
-			)}
+				<div className='Browse'>
+				<button  >Browse Top Restaurants </button>
+				</div>
+				<div className='Invite'>
+				<button>Invite Friends
+					</button>
+				</div>
+			</div>
+    
 		</div>
-	);
+  );
 }

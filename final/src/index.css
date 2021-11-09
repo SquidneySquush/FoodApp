@@ -19,7 +19,7 @@ body {
   min-height: 100vh;
 }
 
-.app {
+.AppCopy {
   background-color: #252d4a;
   width: 450px;
   min-height: 200px;
@@ -29,6 +29,20 @@ body {
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
+ 
+}
+
+.app {
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url(https://envato-shoebox-0.imgix.net/34f8/45f6-47dc-47cf-8948-bc48dbdc1703/pasta4_b294.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=8f6721c92b0c3b45ad37553312f0832f);
+  position: fized;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .score-section {
@@ -50,6 +64,8 @@ body {
 .question-count span {
   font-size: 28px;
 }
+
+.
 
 .question-text {
   margin-bottom: 12px;
