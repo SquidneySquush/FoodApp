@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import Recommend from './http_fetch';
 
 export default function App() {
 	const questions = [
@@ -46,13 +47,12 @@ export default function App() {
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
-	const [answers, setAnswers] = useState([]);
+	const [answers] = useState([]);
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			answers.push(isCorrect);
 		}
-
 		const nextQuestion = currentQuestion + 1;
 		if (nextQuestion < questions.length) {
 			setCurrentQuestion(nextQuestion);
@@ -60,12 +60,12 @@ export default function App() {
 			setShowScore(true);
 		}
 	};
-	console.log(answers);
+
 	return (
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
-					You scored {answers} out of {questions.length}
+					<Recommend />
 				</div>
 			) : (
 				<>
