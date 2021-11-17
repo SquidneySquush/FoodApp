@@ -65,7 +65,7 @@ export default function App() {
 		<div className='app'>
 			{showScore ? (
 				<div className='score-section'>
-					<Recommend />
+					<Recommend answers={answers}/>
 				</div>
 			) : (
 				<>
