@@ -1,29 +1,25 @@
-import "./styles.css";
+import './App.css';
+
 import React from 'react';
-import italian_background from './italian_background.png';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import NavBar from "./components/NavBar"
+import Quiz from './components/Quiz';
+import Home from './components/Home';
 
-export default function App() {
+function App() {
   return (
-  
-    <div className='app'> 
-    
+   
+      <Router>
+      <NavBar/>
+      
+        <Routes>
 
-			<div className='score-section'>
-				Pizza Mind
-			</div>
-			<div className='Button-options'>
-				<div className='TakeQuiz'>
-				<button  >Take Quiz </button>
-				</div>
-				<div className='Browse'>
-				<button  >Browse Top Restaurants </button>
-				</div>
-				<div className='Invite'>
-				<button>Invite Friends
-					</button>
-				</div>
-			</div>
-    
-		</div>
+          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Quiz/>} />
+        
+        </Routes>
+      </Router>
+   
   );
 }
+export default App; 
