@@ -2,6 +2,18 @@ import json
 import pandas as pd
 
 
+def write_data(result):
+    with open("C:/Users/99596/Desktop/curriculum/SDP/menu-list-master/src/data.js", "w") as f:
+        f.write("const menu = [\n")
+        for option in result:
+            content = str(option).replace("   ", "").replace(r"'title'", r'  title').replace(r"'desc'", r' desc').replace(r"'desc'", r' desc') \
+                .replace(r"'price'", r' price').replace(r"'vegetarian'", r' vegetarian').replace(r"'category'", r' category') \
+                .replace(r"'rate'", r' rate').replace(r'{', ' {\n').replace(",", ",\n").replace("}", "\n },")
+            # content = re.sub(r'[\']title[\']([^,]+),', '\n\ttitle\1,\n', str(option))
+            f.write(content + "\n")
+        f.write("];\nexport default menu;")
+
+
 def score_cal(inputs, zone, budget, cravings, preferring):
     score = 0
     if zone == inputs[0]:
@@ -16,7 +28,6 @@ def score_cal(inputs, zone, budget, cravings, preferring):
 
 
 def analyze(p1, p2, p3, p4):
-    print(p1)
     df = pd.read_csv("../dataset/dummy_data.csv", index_col=[0])
     proper_choices = {}
     inputs = [p1, p2, p3, p4]
@@ -24,10 +35,13 @@ def analyze(p1, p2, p3, p4):
         name, zone, rate, budget, preferring, cravings = df.iloc[i].values
 
         score = score_cal(inputs, zone, budget, cravings, preferring)
-        proper_choices[name] = score
+        proper_choices[str(i)] = score
 
     proper_choices = sorted(proper_choices.items(), key=lambda x: x[1], reverse=True)
-    print(proper_choices)
-    result = {"r1": proper_choices[0][0], "r2": proper_choices[1][0], "r3": proper_choices[2][0],
-              "r4": proper_choices[3][0]}
+    result = []
+    for index in proper_choices:
+        name, zone, rate, budget, preferring, cravings = df.iloc[int(index[0])].values
+        result.append({'title': name,'desc': zone, 'rate': int(rate), 'price': budget, 'vegetarian': preferring,
+                       'category': cravings})
+    write_data(result)
     return json.dumps(result, ensure_ascii=False)
