@@ -1,10 +1,7 @@
 import React, { Component, useState, useEffect} from 'react';
-
-//class Quiz extends Component { 
     
 const Quiz = () =>  {
-    //questions() {
-      //return (
+
     const questions = [ 
       {
         questionText: 'What zones are you willing to venture out to?',
@@ -47,8 +44,6 @@ const Quiz = () =>  {
         ],
       }
     ];
-     //);
-  //  } 
   
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
@@ -67,69 +62,6 @@ const Quiz = () =>  {
       }
     };
 
-    
- 
-   // render(){
-     /* const questions = [ 
-        {
-          questionText: 'What zones are you willing to venture out to?',
-          answerOptions: [
-            { answerText: 'A', isCorrect: 'A' },
-            { answerText: 'B', isCorrect: 'B' },
-            { answerText: 'C', isCorrect: 'C' },
-            { answerText: 'D', isCorrect: 'D' },
-          ],
-        },
-        {
-          questionText: 'Boujie or Ballin’ on a Budget?',
-          answerOptions: [
-            { answerText: '$', isCorrect: '$' },
-            { answerText: '$$', isCorrect: '$$', },
-            { answerText: '$$$', isCorrect: '$$$', },
-            { answerText: '$$$$', isCorrect: '$$$$', },
-            { answerText: '$$$$$', isCorrect: '$$$$$', },
-          ],
-        },
-        {
-          questionText: 'Any cravings?',
-          answerOptions: [
-            { answerText: 'Italian', isCorrect: 'Italian' },
-            { answerText: 'Chinese', isCorrect: 'Chinese' },
-            { answerText: 'Indian', isCorrect: 'Indian' },
-            { answerText: 'French', isCorrect: 'French' },
-            { answerText: 'America', isCorrect: 'America' },
-            { answerText: 'Japanese', isCorrect: 'Japanese' },
-            { answerText: 'Thai', isCorrect: 'Thai' },
-            { answerText: 'Brazilian', isCorrect: 'Brazilian' },
-            { answerText: 'Mexican', isCorrect: 'Mexican' },
-          ],
-        },
-        {
-          questionText: 'Preferring Vegetarian?',
-          answerOptions: [
-            { answerText: 'Yes', isCorrect: 'Yes' },
-            { answerText: 'No', isCorrect: 'No' },
-          ],
-        }
-      ];
-
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [showScore, setShowScore] = useState(false);
-    const [answers, setAnswers] = useState([]);
-
-    const handleAnswerOptionClick = (isCorrect) => {
-      if (isCorrect) {
-        answers.push(isCorrect);
-      }
-  
-      const nextQuestion = currentQuestion + 1;
-      if (nextQuestion < questions.length) {
-        setCurrentQuestion(nextQuestion);
-      } else {
-        setShowScore(true);
-      }
-    };
-    */
    
     return (
       
