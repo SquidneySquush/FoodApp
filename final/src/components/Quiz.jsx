@@ -67,7 +67,7 @@ const Quiz = () =>  {
       }
     };
 
-    console.log("I hate this"); 
+    
  
    // render(){
      /* const questions = [ 
@@ -130,11 +130,11 @@ const Quiz = () =>  {
       }
     };
     */
-   // console.log("I hate this"); 
+   
     return (
       
       <div className='Quiz'>
-        <p> hello </p>
+       
         {showScore ? (
           <div className='score-section'>
             You scored {answers} out of {questions.length}
