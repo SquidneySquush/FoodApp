@@ -1,18 +1,18 @@
 
   .Home {
     font-family: sans-serif;
-    text-align: center;
+    /* text-align: center; */
     background-image: url(https://envato-shoebox-0.imgix.net/34f8/45f6-47dc-47cf-8948-bc48dbdc1703/pasta4_b294.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=8f6721c92b0c3b45ad37553312f0832f);
-    position: fixed;
+    /* position: fixed;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100%; */
     background-size: cover;
     background-position: center;
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px; 
   }
 
-  .App-header {
+  /* .App-header {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,10 +20,10 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-  }
+  } */
   
 .NavBar{
-    align-items: left;
+    /* align-items: left; */
     font-size: calc(10px + 2vmin);
     color: white;
 }
