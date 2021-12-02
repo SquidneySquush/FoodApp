@@ -2,16 +2,19 @@ import json
 import pandas as pd
 
 
+def convert_data(result):
+    return str(result).replace("'title'", r'title').replace("'desc'", r'desc').replace("'rate'", r'rate')\
+                            .replace("'price'", r'price').replace("'vegetarian'", r'vegetarian')\
+                            .replace("'catogory'", r'catogory').replace("'img'", r'img').replace("]", "];")
+
 def write_data(result):
+    """title,desc,rate,price,vegetarian,catogory,img"""
     with open("C:/Users/99596/Desktop/curriculum/SDP/menu-list-master/src/data.js", "w") as f:
-        f.write("const menu = [\n")
-        for option in result:
-            content = str(option).replace("   ", "").replace(r"'title'", r'  title').replace(r"'desc'", r' desc').replace(r"'desc'", r' desc') \
-                .replace(r"'price'", r' price').replace(r"'vegetarian'", r' vegetarian').replace(r"'category'", r' category') \
-                .replace(r"'rate'", r' rate').replace(r'{', ' {\n').replace(",", ",\n").replace("}", "\n },")
-            # content = re.sub(r'[\']title[\']([^,]+),', '\n\ttitle\1,\n', str(option))
-            f.write(content + "\n")
-        f.write("];\nexport default menu;")
+    # with open("./data.js", "w") as f:
+        f.write("const menu = ")
+        result = convert_data(result)
+        f.write(result)
+        f.write("\nexport default menu;")
 
 
 def score_cal(inputs, zone, budget, cravings, preferring):
@@ -28,20 +31,21 @@ def score_cal(inputs, zone, budget, cravings, preferring):
 
 
 def analyze(p1, p2, p3, p4):
+    """ title,desc,rate,price,vegetarian,catogory,img """
     df = pd.read_csv("../dataset/dummy_data.csv", index_col=[0])
     proper_choices = {}
     inputs = [p1, p2, p3, p4]
     for i in range(len(df)):
-        name, zone, rate, budget, preferring, cravings = df.iloc[i].values
+        title, desc, rate, price, vegetarian, catogory, img = df.iloc[i].values
 
-        score = score_cal(inputs, zone, budget, cravings, preferring)
+        score = score_cal(inputs, desc, price, vegetarian, catogory)
         proper_choices[str(i)] = score
 
     proper_choices = sorted(proper_choices.items(), key=lambda x: x[1], reverse=True)
     result = []
     for index in proper_choices:
-        name, zone, rate, budget, preferring, cravings = df.iloc[int(index[0])].values
-        result.append({'title': name,'desc': zone, 'rate': int(rate), 'price': budget, 'vegetarian': preferring,
-                       'category': cravings})
+        title, desc, rate, price, vegetarian, catogory, img = df.iloc[int(index[0])].values
+        result.append({'title': title, 'desc': desc, 'rate': int(rate), 'price': price, 'vegetarian': vegetarian,
+                       'category': catogory, 'img': img})
     write_data(result)
     return json.dumps(result, ensure_ascii=False)
