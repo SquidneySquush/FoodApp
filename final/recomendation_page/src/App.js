@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Menu from "./Menu";
 import Categories from "./Categories";
 import items from "./data2";
-import logo from "./logo.JPG";
+import logo from "./pizza_mind.png";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
