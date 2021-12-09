@@ -2,6 +2,7 @@ const menu = [
   {
     title: "restaurant0",
     desc: "D",
+    url: "https://brunospizza.com/menu.htm",
     rate: 2,
     price: "$$$$",
     vegetarian: "no",
@@ -12,6 +13,7 @@ const menu = [
   {
     title: "restaurant1",
     desc: "C",
+    url: "https://brunospizza.com/menu.htm",
     rate: 3,
     price: "$",
     vegetarian: "no",
@@ -22,6 +24,7 @@ const menu = [
   {
     title: "restaurant2",
     desc: "D",
+    url: "https://brunospizza.com/menu.htm",
     rate: 3,
     price: "$$$$",
     vegetarian: "no",
@@ -32,6 +35,7 @@ const menu = [
   {
     title: "restaurant3",
     desc: "A",
+    url: "https://brunospizza.com/menu.htm",
     rate: 1,
     price: "$$$$$",
     vegetarian: "no",
@@ -42,6 +46,7 @@ const menu = [
   {
     title: "restaurant4",
     desc: "C",
+    url: "https://brunospizza.com/menu.htm",
     rate: 2,
     price: "$$$$$",
     vegetarian: "no",
@@ -52,6 +57,7 @@ const menu = [
   {
     title: "restaurant5",
     desc: "B",
+    url: "https://brunospizza.com/menu.htm",
     rate: 1,
     price: "$$$$",
     vegetarian: "yes",
@@ -62,6 +68,7 @@ const menu = [
   {
     title: "restaurant6",
     desc: "B",
+    url: "https://brunospizza.com/menu.htm",
     rate: 5,
     price: "$$$$",
     vegetarian: "no",
@@ -72,6 +79,7 @@ const menu = [
   {
     title: "restaurant7",
     desc: "C",
+    url: "https://brunospizza.com/menu.htm",
     rate: 3,
     price: "$$$",
     vegetarian: "no",
@@ -82,6 +90,7 @@ const menu = [
   {
     title: "restaurant8",
     desc: "D",
+    url: "https://brunospizza.com/menu.htm",
     rate: 3,
     price: "$$$$",
     vegetarian: "no",
@@ -92,6 +101,7 @@ const menu = [
   {
     title: "restaurant9",
     desc: "C",
+    url: "https://brunospizza.com/menu.htm",
     rate: 4,
     price: "$",
     vegetarian: "no",
@@ -102,6 +112,7 @@ const menu = [
   {
     title: "restaurant10",
     desc: "E",
+    url: "https://brunospizza.com/menu.htm",
     rate: 1,
     price: "$$",
     vegetarian: "yes",
@@ -111,6 +122,7 @@ const menu = [
   {
     title: "restaurant11",
     desc: "B",
+    url: "https://brunospizza.com/menu.htm",
     rate: 5,
     price: "$$$$$",
     vegetarian: "no",
@@ -121,6 +133,7 @@ const menu = [
   {
     title: "restaurant12",
     desc: "A",
+    url: "https://brunospizza.com/menu.htm",
     rate: 5,
     price: "$$",
     vegetarian: "yes",
@@ -131,6 +144,7 @@ const menu = [
   {
     title: "restaurant13",
     desc: "B",
+    url: "https://brunospizza.com/menu.htm",
     rate: 4,
     price: "$",
     vegetarian: "no",
@@ -141,6 +155,7 @@ const menu = [
   {
     title: "restaurant14",
     desc: "A",
+    url: "https://brunospizza.com/menu.htm",
     rate: 2,
     price: "$",
     vegetarian: "no",
@@ -151,6 +166,7 @@ const menu = [
   {
     title: "restaurant15",
     desc: "A",
+    url: "https://brunospizza.com/menu.htm",
     rate: 5,
     price: "$",
     vegetarian: "yes",
@@ -161,6 +177,7 @@ const menu = [
   {
     title: "restaurant16",
     desc: "C",
+    url: "https://brunospizza.com/menu.htm",
     rate: 5,
     price: "$$$$$",
     vegetarian: "yes",
@@ -171,6 +188,7 @@ const menu = [
   {
     title: "restaurant17",
     desc: "D",
+    url: "https://brunospizza.com/menu.htm",
     rate: 5,
     price: "$$$$$",
     vegetarian: "yes",
@@ -181,6 +199,7 @@ const menu = [
   {
     title: "restaurant18",
     desc: "D",
+    url: "https://brunospizza.com/menu.htm",
     rate: 3,
     price: "$$$$",
     vegetarian: "yes",
@@ -191,6 +210,7 @@ const menu = [
   {
     title: "restaurant19",
     desc: "B",
+    url: "https://brunospizza.com/menu.htm",
     rate: 1,
     price: "$",
     vegetarian: "no",
