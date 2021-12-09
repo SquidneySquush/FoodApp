@@ -1,0 +1,8 @@
+Django                             3.2.9
+django-cors-headers                3.10.0
+django-grappelli                   2.14.3
+django-registration-redux          2.9
+django-simpleui                    3.9.1
+django-widget-tweaks               1.4.8
+djangorestframework                3.12.4
+pandas                             1.2.4
