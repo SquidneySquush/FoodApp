@@ -1,4 +1,6 @@
 import React, { Component, useState, useEffect} from 'react';
+import Recommend from '../http_fetch.js';
+
     
 const Quiz = () =>  {
 
@@ -42,7 +44,7 @@ const Quiz = () =>  {
           { answerText: 'Yes', isCorrect: 'Yes' },
           { answerText: 'No', isCorrect: 'No' },
         ],
-      }
+      },
     ];
   
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -69,7 +71,7 @@ const Quiz = () =>  {
        
         {showScore ? (
           <div className='score-section'>
-            You scored {answers} out of {questions.length}
+            <Recommend answers={answers}/> 
           </div>
         ) : (
           <>

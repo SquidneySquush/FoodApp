@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from "./components/NavBar"
 import Quiz from './components/Quiz';
 import Home from './components/Home';
+import Recommend from './http_fetch.js';
+
 
 function App() {
   return (
