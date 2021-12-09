@@ -66,12 +66,17 @@ const Quiz = () =>  {
 
    
     return (
-      
+    
       <div className='Quiz'>
        
         {showScore ? (
           <div className='score-section'>
-            <Recommend answers={answers}/> 
+            {/* <Recommend answers={answers}/>  */}
+            <button name="redirect" onClick="redirect()">Finish</button>{}
+            
+          <script type="text/javascript">
+        function redirect(){ window.location.assign("http://localhost:3000")};
+          </script>
           </div>
         ) : (
           <>
