@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Recommend from './http_fetch.js';
 
 export default function App() {
 	const questions = [
@@ -65,8 +66,12 @@ export default function App() {
 		<div className='AppCopy'>
 			{showScore ? (
 				<div className='score-section'>
-					You scored {answers} out of {questions.length}
-				</div>
+            			<Recommend answers={answers}/>  
+            	<button name="redirect" onClick="redirect()" >Finish</button>
+          <script type="text/javascript">
+        		function redirect(){ window.location.assign("http://localhost:3001")};
+          </script>
+          </div>
 			) : (
 				<>
 					<div className='question-section'>
