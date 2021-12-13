@@ -21,7 +21,15 @@ const App = () => {
     setMenuItems(newItems);
   };
   return (
+    
     <main>
+      <div>
+      {/* <script type="text/javascript">
+        function redirect(){ window.location.reload()};
+        
+          </script> */}
+          <meta http-equiv="refresh" content="30"/>
+    </div>
       <section className="menu section">
         <div className="title">
           <img src={logo} alt="logo" className="logo" />
